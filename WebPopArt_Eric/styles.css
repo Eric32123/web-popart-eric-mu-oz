@@ -1,0 +1,479 @@
+/* Diseño minimalista inspirado en MoMA - Espacios en blanco y tipografía moderna */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Crimson+Text:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.7;
+    letter-spacing: 0.2px;
+    font-weight: 400;
+}
+
+/* Header minimalista */
+header {
+    background-color: #ffffff;
+    padding: 2rem 3rem;
+    border-bottom: 1px solid #d5d5d5;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 1.8px;
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: transparent;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+    background-color: #000000;
+    border-color: #000000;
+}
+
+nav a[aria-current="page"] {
+    background-color: #f0f0f0;
+    border-color: #000000;
+    font-weight: 600;
+}
+
+/* Sección hero mejorada */
+.hero {
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 3rem;
+    background-color: #ffffff;
+    color: #000000;
+    position: relative;
+    border: none;
+}
+
+.hero-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hero-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.artist-full {
+    flex: 1;
+}
+
+.artist-full h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.hero::before {
+    display: none;
+}
+
+.hero h1 {
+    font-family: 'Crimson Text', serif;
+    font-size: 4.5rem;
+    font-weight: 600;
+    text-shadow: none;
+    z-index: 1;
+    position: relative;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin: 2rem 0;
+    z-index: 1;
+    position: relative;
+    font-weight: 300;
+    color: #707070;
+    letter-spacing: 0.3px;
+    line-height: 1.6;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 500px;
+    border: none;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+    transform: scale(1.02);
+}
+
+.artist-intro h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.artist-intro p {
+    margin-bottom: 1rem;
+}
+
+section {
+    padding: 5rem 3rem;
+    margin: 0;
+    border: none;
+    background-color: #ffffff;
+    box-shadow: none;
+    position: relative;
+}
+
+section:nth-child(even) {
+    background-color: #f9f9f9;
+    color: #000000;
+    box-shadow: none;
+}
+
+section:nth-child(odd) {
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: none;
+}
+
+/* Ajuste: Works (tercer sección) */
+#works {
+    color: #000000;
+}
+
+#works h2 {
+    color: #000000;
+}
+
+/* Ajuste: About Pop Art (quinta sección) */
+#about {
+    color: #000000;
+}
+
+#about h2 {
+    color: #000000;
+}
+
+section h2 {
+    font-family: 'Crimson Text', serif;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: none;
+    color: #2a2a2a;
+    letter-spacing: 1.2px;
+    border-bottom: 1px solid #d5d5d5;
+    padding-bottom: 2rem;
+}
+
+section:nth-child(even) h2 {
+    color: #2a2a2a;
+}
+
+.obras-grid, .galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.galeria-item {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.galeria-item:hover {
+    transform: translateY(-3px);
+}
+
+.galeria-item img {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 1.2rem;
+}
+
+.galeria-item:hover img {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.galeria-item h3 {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2a2a2a;
+    margin: 0 0 0.3rem 0;
+    letter-spacing: 0.3px;
+}
+
+.galeria-item p {
+    font-size: 0.9rem;
+    color: #707070;
+    margin: 0;
+    font-weight: 300;
+}
+
+.video-container {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.video-container h3 {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2a2a2a;
+    margin-bottom: 2rem;
+    letter-spacing: 0.5px;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    border: none;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+}
+
+.obra, img {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.obra:hover, img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    filter: none;
+    display: block;
+}
+
+ol {
+    list-style: none;
+    counter-reset: obra-counter;
+    padding: 0;
+}
+
+ol li {
+    counter-increment: obra-counter;
+    margin-bottom: 2.5rem;
+    padding: 2rem;
+    background-color: #f8f8f8;
+    border: none;
+    border-left: 3px solid #d5d5d5;
+    font-size: 1rem;
+    box-shadow: none;
+    line-height: 1.8;
+    transition: background-color 0.3s ease, border-left-color 0.3s ease;
+}
+
+ol li:hover {
+    background-color: #f1f1f1;
+    border-left-color: #2a2a2a;
+}
+
+ol li::before {
+    content: counter(obra-counter) ". ";
+    font-weight: 500;
+    color: #505050;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 1.5rem 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    transition: color 0.3s ease;
+    line-height: 1.8;
+}
+
+ul li:hover {
+    background-color: transparent;
+    color: #707070;
+}
+a {
+    color: #2a2a2a;
+    text-decoration: none;
+    font-weight: 500;
+    text-shadow: none;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+a:hover {
+    color: #707070;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+footer {
+    text-align: center;
+    padding: 3rem;
+    background-color: #f9f9f9;
+    color: #707070;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-top: 1px solid #d5d5d5;
+    box-shadow: none;
+    text-shadow: none;
+    font-size: 0.65rem;
+    letter-spacing: 1.2px;
+}
+
+#credits a {
+    color: #000000;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid #000000;
+    border-radius: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    margin: 0.25rem;
+}
+
+#credits a:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .hero-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero h1 {
+        font-size: 3rem;
+    }
+    .hero p {
+        font-size: 1.1rem;
+    }
+    nav ul {
+        gap: 1.5rem;
+    }
+    section h2 {
+        font-size: 1.8rem;
+    }
+    header {
+        padding: 1.5rem;
+    }
+    section {
+        padding: 3rem 1.5rem;
+    }
+    nav a {
+        font-size: 0.65rem;
+    }
+}
+
+/* Modal */
+#image-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(42, 42, 42, 0.96);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    border: none;
+    box-shadow: none;
+}
+
+#modal-image {
+    width: 100%;
+    height: auto;
+    filter: none;
+}
+
+.close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 300;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+    display: block;
+    text-shadow: none;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #ccc;
+    background: transparent;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .video-container iframe {
+        height: 250px;
+    }
+}
